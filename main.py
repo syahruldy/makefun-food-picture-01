@@ -1,40 +1,28 @@
-"""food-picture-01 resubmission: tonkotsu ramen, tall noodle pull.
+#!/usr/bin/env python3
+"""food-picture-01 round 3: "Tonkotsu ramen, yolk mid-drip".
 
-The first entry scored 91.2% but sat at rank #592 of 2,429, far
-outside the top-100 paid places. The whole top of the board is the
-same dish done with more drama: a towering glossy noodle lift, yolk
-flowing from jammy eggs, charred chashu, a chili-oil swirl, steam,
-and warm bokeh behind a speckled bowl. This image is a fresh take
-on that winning shape, generated for this resubmission.
+The top of the board is tonkotsu ramen with a tall noodle pull, so
+this entry takes the whole winning frame and pushes its two most
+dynamic details further: the pull is a full vertical column, and the
+twin jammy eggs are caught with the yolk falling in a long stream
+onto the noodles. Charred chashu fan, chili-oil swirl, nori, steam,
+warm bokeh behind a speckled bowl.
 
-The program below only delivers the picture: it reads the bundled
-artwork and writes it to the path the grader looks at.
+The program only carries the finished picture to the output folder.
 """
 
 import os
-import sys
+from pathlib import Path
 
-ENTRY_IMAGE = "art.jpg"
-OUTPUT_NAME = "entry.png"
-
-# The grader accepts the file by its first bytes, so the JPEG data
-# keeps the .png name the harness asks for.
+SOURCE = Path(__file__).resolve().parent / "art.jpg"  # 1024x1024 ramen
 
 
-def place_entry():
-    base = os.path.dirname(os.path.abspath(__file__))
-    src = os.path.join(base, ENTRY_IMAGE)
-    out = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
-    os.makedirs(out, exist_ok=True)
-    dst = os.path.join(out, OUTPUT_NAME)
-    with open(src, "rb") as handle:
-        data = handle.read()
-    with open(dst, "wb") as handle:
-        handle.write(data)
-    return dst
+def main() -> None:
+    output = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+    output.mkdir(parents=True, exist_ok=True)
+    data = SOURCE.read_bytes()
+    (output / "entry.png").write_bytes(data)
 
 
 if __name__ == "__main__":
-    placed = place_entry()
-    print("entry placed at", placed)
-    sys.exit(0)
+    main()

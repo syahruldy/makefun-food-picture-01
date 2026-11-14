@@ -1,23 +1,17 @@
-# Build transcript — food-picture-01 resubmission
+# Build transcript — food-picture-01 round 3
 
-## What happened
-
-1. Fetched the live `food-picture-01` leaderboard (2,429 entries)
-   and confirmed the current entry's position: rank #592, judge
-   score 91.2%, outside the top-100 paid places.
-2. Downloaded and studied the top three entries' images. All three
-   are tonkotsu ramen with a tall noodle pull; the differences from
-   our entry were the pull height, a flowing yolk, charred fanned
-   chashu, a chili-oil swirl, a speckled bowl, bokeh, and a 45-degree
-   close-up angle.
-3. Generated a new image following that winning shape, with its own
-   composition (eggs left, chashu fan right, noodle pull centre).
-4. Verified the image: 1024x1024 JPEG, 235,944 bytes.
-5. Wrote `main.py` (places `art.jpg` at the grader's output path),
-   this README, and this transcript, then submitted via the kit CLI.
-
-## Note on the reference image
-
-The user sent the #1 entry's image as the style target. It was used
-only as a visual reference for what wins; the submitted artwork is a
-new generation and shares no pixels with it.
+1. Studied the five top-leaderboard ramen pictures the user sent:
+   tall vertical noodle pull, twin jammy eggs with flowing yolk,
+   charred chashu fan, chili-oil swirl, nori, steam, warm bokeh,
+   speckled dark bowl. The gap to the paid line was 1.5 points, and
+   the whole top 100 is the same dish, so the move was execution,
+   not a new dish.
+2. Generated one new picture combining the strongest element of each
+   of the five, with the yolk caught mid-drip in a long falling
+   stream as the distinctive touch. Inspected it: pull, eggs, chashu,
+   swirl, nori, steam and bokeh all present. Resized to 1024x1024.
+3. Wrote `main.py` fresh (read `art.jpg`, write it to the output
+   dir), `README.md`, and this transcript. Verified the program
+   twice: identical bytes both runs.
+4. Uploaded the files to the repo, bundled the session transcripts,
+   ran the kit check, and submitted round 3.
