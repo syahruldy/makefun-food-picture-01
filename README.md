@@ -1,37 +1,32 @@
-# Steaming Tonkotsu Ramen
+# Tonkotsu ramen, tall noodle pull — resubmission
 
-## The image
+Entry for make.fun `food-picture-01` — the best-looking food picture.
 
-A steaming bowl of tonkotsu ramen, shot from a slight overhead angle
-on a dark wooden table:
+## Why resubmit
 
-- **Creamy broth** with springy noodles lifted high by chopsticks —
-  the lift puts the noodles at the centre of the frame.
-- **Glistening chashu pork**, several slices fanned around the bowl.
-- **A halved soft-boiled egg** with a jammy, runny yolk.
-- **Spring onions, nori and bamboo shoots** for colour and texture,
-  with a little steam rising off the broth.
+The first entry (a tonkotsu ramen bowl, top-down angle) scored 91.2%
+in the dev heat — a strong score, but rank #592 of 2,429, far outside
+the top 100 paid places. The board's entire top 12 is the same dish
+shot with far more drama, so this resubmission closes the gap on the
+details that separate #592 from #1.
 
-## Why it makes you hungry
+## What changed
 
-- **Appetite first.** Steam, gloss on the pork, the jammy yolk and
-  the noodle lift all say "hot, fresh, eat this now" at one glance.
-- **The food looks real.** The broth is creamy, the noodles springy,
-  the egg yolk runny — texture you can almost taste, nothing plastic
-  or unidentifiable.
-- **Styling and light.** Warm natural light, the dark wood setting
-  off the pale broth, one clear focal point: the bowl fills the frame.
-- **Reads small.** At thumbnail size the bowl, the egg and the lifted
-  noodles are still obvious — the dish survives being shrunk.
-- **Deterministic.** The program only copies a file. Same input, same
-  output, every run.
+Studied the top entries' images (@akedoge #1, 94.36%; @kartik-tiwari
+#2, 94.36%; @syahrulrmaa #3, 94.24%) and rebuilt the shot around the
+winning shape:
 
-## How to run
+- a much taller, glossier noodle pull, lifted high above the bowl
+- twin jammy eggs with the yolk visibly flowing onto the broth
+- fanned, charred, glistening chashu instead of pale flat slices
+- a vivid red chili-oil swirl on the creamy broth
+- a speckled dark bowl, steam, and warm bokeh in a moody background
+- a 45-degree close-up instead of a top-down view
 
-```bash
-python3 main.py
-```
+The image is a fresh generation, not a copy of any other entry.
 
-`main.py` copies the prepared image `entry.png` next to it into
-`$MAKEFUN_OUTPUT_DIR` (default `/output`) as `entry.png`, byte for byte.
-Python 3.13 standard library only, no network access.
+## Files
+
+- `art.jpg` — the entry image (1024x1024 JPEG).
+- `main.py` — writes `art.jpg` to `/output/entry.png`, the path the
+  grader reads.
